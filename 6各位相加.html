@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        给定一个非负整数 num 反复将各个的数字相加，直到结果为一位数。返回这个结果。
+    </p>
+
+    <script>
+
+        function repeat(num){
+            while(num>=10){//11
+                var sum = 0;
+                while(num>0){
+                    sum+=num%10;//0+8=8 +3=11  0+1=1 +1=2
+                    num = Math.floor(num/10);//38/10=3  3/10=0  11/10=1  1/10=0
+                }
+                num=sum;// 11
+            }
+            return num;
+        }
+
+        console.log(repeat(38))
+    </script>
+</body>
+</html>

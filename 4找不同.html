@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        给定两个字符串s 和 t 他们只包含小写字母 
+        字符串t 由字符串s 随机重排，然后在随机位置添加一个字母
+        请找出t中被添加的字母
+    </p>
+
+    <script>
+
+
+    function reset(s,t){
+        for(i=0;i<t.length;i++){
+                if(s.indexOf(t[i])===-1 || s.indexOf(t[i])!==i){
+                    return "随机加的"+t[i];
+                }
+        }
+    }
+
+    console.log(reset('abs','asbd'));
+    console.log(reset("","a"));
+    console.log(reset("abc","abbc"));
+    </script>
+</body>
+</html>

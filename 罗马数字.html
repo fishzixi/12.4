@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        给定一个罗马数字转化为整数，一般大的在小的右边，4,9开头有例外
+    </p>
+    <script>
+        function romanNumerals(num) {
+            var Num = {
+                I:1,
+                V:5,
+                X:10,
+                L:50,
+                C:100,
+                D:500,
+                M:1000
+            }
+            var sum =0;
+            var upValue = 0;
+            for(i=num.length-1;i>=0;i--){
+                if(upValue<=Num[num[i]]){
+                    sum+=Num[num[i]];
+                }else{
+                    sum-=Num[num[i]];
+                }
+                upValue=Num[num[i]];
+            }
+            return sum;
+        }
+        console.log(romanNumerals("MCIVIV"))
+    </script>
+    
+</body>
+</html>

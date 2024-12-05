@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        nums1 = [1,2,2,1],nums2=[2,2] //[2]
+        nums1 = [4,9,5],nums2=[9,4,9,8,4] //[9,4]
+        
+    </p>
+    <script>
+
+        function noRepeat(arr1,arr2){
+            var res = [];
+            for(i=0;i<arr1.length;i++){
+                    if(arr2.indexOf(arr1[i])!==-1){
+                        if(res.indexOf(arr1[i])===-1){
+                            res.push(arr1[i]);
+                        }
+                    }
+            }
+            return res;
+        }
+
+        console.log(noRepeat([1,2,2,1],[2,2]))
+        console.log(noRepeat([9,4,9,8,4],[9,4,7]))
+        
+    </script>
+</body>
+</html>

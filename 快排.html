@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     
+     function part(arr,target){
+        var index = 0;
+        var left = -1;
+        var right = arr.length;
+        while(index<right){
+
+        
+        if(arr[index]<30){
+            left++;
+            var temp = arr[index];
+            arr[index]=arr[left];
+            arr[left]=temp;
+            index++;
+        }else if(arr[index]>target){
+            right--;
+            var temp = arr[index];
+            arr[index]=arr[right];
+            arr[right]=temp;
+        }else{
+            index++;
+        }
+
+     }
+     return arr;
+
+    }
+
+    console.log(part([30,16,1,5,30,32,58,30,15,85],30))
+
+
+    </script>
+</body>
+</html>
